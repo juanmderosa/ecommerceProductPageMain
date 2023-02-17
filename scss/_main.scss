@@ -1,0 +1,275 @@
+@import "vars";
+
+.mainContainer{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 750px){
+        margin: 0%;
+        flex-direction: column;
+    }
+
+    .productMaiContainer{
+        width: 50%;
+        padding: 10% 5%;
+        @media screen and (max-width: 750px){
+            padding: 5% 7%;
+            width: 100%;
+        }
+
+        .productDetailsContainer{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .company{
+                text-transform: uppercase;
+                color: $Orange;
+                font-weight: $fontWeight700;
+                margin-bottom: 15px;
+                font-size: 1rem;
+            }
+            .productTitle{
+                font-size: 2.5rem;
+                font-weight: $fontWeight700;
+                line-height: 3rem;
+                margin-bottom: 25px;
+                color: $Black;
+                @media screen and (max-width: 750px){
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+            .productDescription{
+                font-size: 1rem;
+                font-weight: $fontWeight400;
+                color: $Darkgrayishblue;
+                margin-bottom: 25px;
+                @media screen and (max-width: 750px){
+                    font-size: 0.9rem;
+                }
+            }
+
+            .PriceContainer{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 35px;
+                @media screen and (max-width: 750px){
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .discountContainer{
+                    display: flex;
+                    width: 150px;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    margin-bottom: 5px;
+
+                    .price{
+                        font-weight: $fontWeight700;
+                        font-size: 1.5rem;
+                        .priceNumber{
+                            font-weight: $fontWeight700;
+                            font-size: 1.5rem;
+                            color: $Black;
+
+                        }
+                        
+                    }
+                    .discount{
+                        background-color: $Paleorange;
+                        color: $Orange;
+                        font-weight: $fontWeight700;
+                        padding: 1px 10px;
+                        border-radius: 5px;
+                        font-size: 0.9rem;
+                    }
+                }
+            .regularPrice{
+                font-size: 1rem;
+                font-weight: $fontWeight700;
+                color: $Grayishblue;
+                text-decoration: line-through;
+            }
+            }
+        }
+        .addToCartContainer{
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 750px){
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .addContainer{
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100px;
+                background-color: $Lightgrayishblue;
+                border-radius: 5px;
+                width: 30%;
+                @media screen and (max-width: 750px){
+                    width: 100%;
+                }
+                
+                .addtoCartQty{
+                    font-size: 1rem;
+                    font-weight: $fontWeight700;
+                    color: $Black;
+                    border: none;
+                    background-color: $Lightgrayishblue;
+                    width: 30px;
+                    text-align: center;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                
+            }
+            .icon-minus{
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            
+            .icon-plus{
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+            
+            .iconDisabled{
+                opacity: 0.7;
+            }
+            
+                
+        }
+        .addtoCartBtn{
+            
+            width: 60%;
+            height: 50px;
+            background-color: $Orange;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            &:disabled{
+                opacity: 0.7;
+            }
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+            @media screen and (max-width: 750px){
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .addtoCartIcon{
+                margin-right: 10px;
+            }
+            .addtoCartP{
+                color: $White;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .imagesMainSection{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+        padding: 0% 5%;
+        @media screen and (max-width: 750px){
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        .imgPrincipalContainer{
+            width: 100%;
+            .principal{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 35px;
+                @media screen and (max-width: 750px){
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 0px;
+                }
+            }
+            .mobileImgBtnPrev{ 
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top:30%;
+                left: 5%;
+                background-color: $White;
+                padding: 8px;
+                @media screen and (min-width: 750px){
+                    display: none;
+                }
+            }
+            .mobileImgBtnNext{ 
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top:30%;
+                right: 5%;
+                background-color: $White;
+                padding: 8px;
+                @media screen and (min-width: 750px){
+                    display: none;
+                }
+            }
+        }
+        .imgThumContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 5%;
+            @media screen and (max-width: 750px){
+                display: none;
+            }
+            .thumbnail{
+                width: 20%;
+                border-radius: 15px;
+                &:hover{
+                    border: 3px solid $Orange;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,623 @@
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+/* Normalize */
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  font-weight: 400; }
+
+html, body {
+  height: 100%; }
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; }
+
+input, button, textarea, select {
+  font: inherit; }
+
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: white; }
+
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+.headerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0% 5%;
+  padding: 2% 0%;
+  border-bottom: 1px solid #f7f8fd; }
+  @media screen and (max-width: 750px) {
+    .headerContainer {
+      display: none; } }
+  .headerContainer .logoyNavContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    @media screen and (max-width: 950px) {
+      .headerContainer .logoyNavContainer {
+        width: 70%; } }
+    .headerContainer .logoyNavContainer .logoContainer {
+      width: 20%; }
+    .headerContainer .logoyNavContainer .navContainer {
+      width: 80%; }
+      .headerContainer .logoyNavContainer .navContainer .navUlContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+      .headerContainer .logoyNavContainer .navContainer .navLi {
+        list-style: none; }
+        .headerContainer .logoyNavContainer .navContainer .navLi:hover {
+          display: block; }
+        .headerContainer .logoyNavContainer .navContainer .navLi a {
+          text-decoration: none;
+          font-size: 1rem;
+          color: #68707d;
+          font-weight: 400;
+          position: relative; }
+          .headerContainer .logoyNavContainer .navContainer .navLi a:hover {
+            color: black; }
+  .headerContainer a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -150%;
+    width: 100%;
+    height: 5px;
+    background-color: #ff7d1a;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; }
+  .headerContainer a:hover::after {
+    opacity: 1; }
+  .headerContainer .userContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%; }
+    @media screen and (max-width: 950px) {
+      .headerContainer .userContainer {
+        width: 30%; } }
+    .headerContainer .userContainer .iconsContainer {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; }
+      .headerContainer .userContainer .iconsContainer .cartIconContainer {
+        display: flex; }
+      .headerContainer .userContainer .iconsContainer .cartIcon {
+        cursor: pointer; }
+        .headerContainer .userContainer .iconsContainer .cartIcon path:hover {
+          fill: black; }
+      .headerContainer .userContainer .iconsContainer .cartQtyContainer {
+        width: 25px;
+        height: 15px;
+        background-color: #ff7d1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 75%;
+        position: sticky; }
+        .headerContainer .userContainer .iconsContainer .cartQtyContainer .cartQtyHeader {
+          color: white;
+          font-size: 0.7rem;
+          font-weight: 700; }
+      .headerContainer .userContainer .iconsContainer .userImg {
+        width: 15%;
+        cursor: pointer; }
+        @media screen and (max-width: 950px) {
+          .headerContainer .userContainer .iconsContainer .userImg {
+            width: 40%; } }
+        .headerContainer .userContainer .iconsContainer .userImg:hover {
+          border: 2px solid #ff7d1a;
+          border-radius: 50%; }
+
+@media screen and (min-width: 751px) {
+  .mobileMenu {
+    display: none; } }
+
+@media screen and (max-width: 750px) {
+  .mobileMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 5%; }
+    .mobileMenu .logoAndMenuIcon {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      width: 50%; }
+      .mobileMenu .logoAndMenuIcon .iconMenu {
+        margin-right: 20px;
+        cursor: pointer; }
+    .mobileMenu .userContainerMobile {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%; }
+      .mobileMenu .userContainerMobile .cartIconContainerMobile {
+        display: flex; }
+        .mobileMenu .userContainerMobile .cartIconContainerMobile .cartIconMobile {
+          width: 50%;
+          max-width: 25px;
+          margin-right: 20px;
+          cursor: pointer; }
+          .mobileMenu .userContainerMobile .cartIconContainerMobile .cartIconMobile path:hover {
+            fill: black; }
+        .mobileMenu .userContainerMobile .cartIconContainerMobile .cartQtyContainerMobile {
+          width: 30px;
+          height: 15px;
+          background-color: #ff7d1a;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          position: absolute;
+          right: 12%; }
+          .mobileMenu .userContainerMobile .cartIconContainerMobile .cartQtyContainerMobile .cartQtyHeaderMobile {
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700; }
+    .mobileMenu .userImgMobile {
+      width: 15%; }
+      .mobileMenu .userImgMobile:hover {
+        border: 2px solid #ff7d1a;
+        border-radius: 50%; } }
+
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+.mainContainer {
+  margin: 5%;
+  display: flex;
+  flex-direction: row; }
+  @media screen and (max-width: 750px) {
+    .mainContainer {
+      margin: 0%;
+      flex-direction: column; } }
+  .mainContainer .productMaiContainer {
+    width: 50%;
+    padding: 10% 5%; }
+    @media screen and (max-width: 750px) {
+      .mainContainer .productMaiContainer {
+        padding: 5% 7%;
+        width: 100%; } }
+    .mainContainer .productMaiContainer .productDetailsContainer {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .mainContainer .productMaiContainer .productDetailsContainer .company {
+        text-transform: uppercase;
+        color: #ff7d1a;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 1rem; }
+      .mainContainer .productMaiContainer .productDetailsContainer .productTitle {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 3rem;
+        margin-bottom: 25px;
+        color: black; }
+        @media screen and (max-width: 750px) {
+          .mainContainer .productMaiContainer .productDetailsContainer .productTitle {
+            font-size: 1.5rem;
+            line-height: 2rem; } }
+      .mainContainer .productMaiContainer .productDetailsContainer .productDescription {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #68707d;
+        margin-bottom: 25px; }
+        @media screen and (max-width: 750px) {
+          .mainContainer .productMaiContainer .productDetailsContainer .productDescription {
+            font-size: 0.9rem; } }
+      .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px; }
+        @media screen and (max-width: 750px) {
+          .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; } }
+        .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer .discountContainer {
+          display: flex;
+          width: 150px;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          flex-direction: row;
+          margin-bottom: 5px; }
+          .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer .discountContainer .price {
+            font-weight: 700;
+            font-size: 1.5rem; }
+            .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer .discountContainer .price .priceNumber {
+              font-weight: 700;
+              font-size: 1.5rem;
+              color: black; }
+          .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer .discountContainer .discount {
+            background-color: #ffede0;
+            color: #ff7d1a;
+            font-weight: 700;
+            padding: 1px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem; }
+        .mainContainer .productMaiContainer .productDetailsContainer .PriceContainer .regularPrice {
+          font-size: 1rem;
+          font-weight: 700;
+          color: #b6bcc8;
+          text-decoration: line-through; }
+    .mainContainer .productMaiContainer .addToCartContainer {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      @media screen and (max-width: 750px) {
+        .mainContainer .productMaiContainer .addToCartContainer {
+          width: 100%;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center; } }
+      .mainContainer .productMaiContainer .addToCartContainer .addContainer {
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100px;
+        background-color: #f7f8fd;
+        border-radius: 5px;
+        width: 30%; }
+        @media screen and (max-width: 750px) {
+          .mainContainer .productMaiContainer .addToCartContainer .addContainer {
+            width: 100%; } }
+        .mainContainer .productMaiContainer .addToCartContainer .addContainer .addtoCartQty {
+          font-size: 1rem;
+          font-weight: 700;
+          color: black;
+          border: none;
+          background-color: #f7f8fd;
+          width: 30px;
+          text-align: center; }
+          .mainContainer .productMaiContainer .addToCartContainer .addContainer .addtoCartQty:focus {
+            outline: none; }
+      .mainContainer .productMaiContainer .addToCartContainer .icon-minus {
+        cursor: pointer; }
+        .mainContainer .productMaiContainer .addToCartContainer .icon-minus:hover {
+          opacity: 0.7; }
+      .mainContainer .productMaiContainer .addToCartContainer .icon-plus {
+        cursor: pointer; }
+        .mainContainer .productMaiContainer .addToCartContainer .icon-plus:hover {
+          opacity: 0.7; }
+      .mainContainer .productMaiContainer .addToCartContainer .iconDisabled {
+        opacity: 0.7; }
+    .mainContainer .productMaiContainer .addtoCartBtn {
+      width: 60%;
+      height: 50px;
+      background-color: #ff7d1a;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .mainContainer .productMaiContainer .addtoCartBtn:disabled {
+        opacity: 0.7; }
+      .mainContainer .productMaiContainer .addtoCartBtn:focus {
+        outline: none; }
+      .mainContainer .productMaiContainer .addtoCartBtn:hover {
+        opacity: 0.7; }
+      @media screen and (max-width: 750px) {
+        .mainContainer .productMaiContainer .addtoCartBtn {
+          width: 100%;
+          margin-top: 15px; } }
+      .mainContainer .productMaiContainer .addtoCartBtn .addtoCartIcon {
+        margin-right: 10px; }
+      .mainContainer .productMaiContainer .addtoCartBtn .addtoCartP {
+        color: white;
+        font-weight: 700;
+        font-size: 0.9rem; }
+  .mainContainer .imagesMainSection {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0% 5%; }
+    @media screen and (max-width: 750px) {
+      .mainContainer .imagesMainSection {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px; } }
+    .mainContainer .imagesMainSection .imgPrincipalContainer {
+      width: 100%; }
+      .mainContainer .imagesMainSection .imgPrincipalContainer .principal {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 35px; }
+        @media screen and (max-width: 750px) {
+          .mainContainer .imagesMainSection .imgPrincipalContainer .principal {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 0px; } }
+      .mainContainer .imagesMainSection .imgPrincipalContainer .mobileImgBtnPrev {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        background-color: white;
+        padding: 8px; }
+        @media screen and (min-width: 750px) {
+          .mainContainer .imagesMainSection .imgPrincipalContainer .mobileImgBtnPrev {
+            display: none; } }
+      .mainContainer .imagesMainSection .imgPrincipalContainer .mobileImgBtnNext {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        background-color: white;
+        padding: 8px; }
+        @media screen and (min-width: 750px) {
+          .mainContainer .imagesMainSection .imgPrincipalContainer .mobileImgBtnNext {
+            display: none; } }
+    .mainContainer .imagesMainSection .imgThumContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 5%; }
+      @media screen and (max-width: 750px) {
+        .mainContainer .imagesMainSection .imgThumContainer {
+          display: none; } }
+      .mainContainer .imagesMainSection .imgThumContainer .thumbnail {
+        width: 20%;
+        border-radius: 15px; }
+        .mainContainer .imagesMainSection .imgThumContainer .thumbnail:hover {
+          border: 3px solid #ff7d1a;
+          opacity: 0.7; }
+
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+.cartContainer {
+  width: 320px;
+  height: auto;
+  min-height: 200px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: -1px 1px 10px 2px #b6bcc8;
+  position: absolute;
+  top: 12%;
+  right: 8%;
+  z-index: 10; }
+  @media screen and (max-width: 750px) {
+    .cartContainer {
+      top: 10%;
+      right: 5%; } }
+
+.cartContainerDisplayNone {
+  display: none; }
+
+.titleCartContainer {
+  border-bottom: 1px solid #b6bcc8;
+  padding: 5%; }
+
+.titleCart {
+  font-size: 1rem;
+  font-weight: 700; }
+
+.productsCartContainer {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; }
+
+.emptyCart {
+  color: #68707d;
+  font-weight: 700; }
+
+.productCartInfo {
+  width: 100%; }
+
+.imgThumCart {
+  width: 20%; }
+
+.cartDescriptionProductTitle {
+  font-size: 0.8rem;
+  color: #68707d; }
+
+.priceDetails {
+  font-size: 0.9rem;
+  color: black;
+  font-weight: 700; }
+
+.priceNumber {
+  font-size: 0.9rem;
+  color: #68707d; }
+
+.totalPriceCart {
+  font-size: 0.9rem;
+  color: #68707d; }
+
+.productCartInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px; }
+
+.checkoutBtn {
+  width: 100%;
+  height: 50px;
+  background-color: #ff7d1a;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700; }
+
+.iconDelete {
+  cursor: pointer; }
+
+/* Colors */
+/* Primary */
+/* Neutral */
+/* (with 75% opacity for lightbox background) */
+/* Font */
+/* Estilos para la capa superpuesta (modal) */
+.modal {
+  display: none; }
+
+.modalDisplay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75); }
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  max-height: 400px; }
+  .modal-content .closeIcon {
+    cursor: pointer;
+    width: 20px;
+    position: absolute;
+    top: -10%;
+    right: 5%; }
+    .modal-content .closeIcon :hover {
+      fill: #ff7d1a; }
+  .modal-content .modalPrincipalContainer {
+    width: 100%; }
+    .modal-content .modalPrincipalContainer .modalImgsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .modal-content .modalPrincipalContainer .modalImgsContainer .iconPrevious {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+        border-radius: 50%;
+        position: relative;
+        left: -20px; }
+        .modal-content .modalPrincipalContainer .modalImgsContainer .iconPrevious path {
+          stroke: red; }
+      .modal-content .modalPrincipalContainer .modalImgsContainer .iconNext {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+        border-radius: 100%;
+        position: relative;
+        right: -20px; }
+        .modal-content .modalPrincipalContainer .modalImgsContainer .iconNext path {
+          stroke: red; }
+      .modal-content .modalPrincipalContainer .modalImgsContainer .modalprincipal {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 35px; }
+  .modal-content .modalImgThumContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5px; }
+    .modal-content .modalImgThumContainer .imgThum {
+      width: 20%;
+      border-radius: 5px; }
+
+.attribution {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  padding-bottom: 10px; }
+
+.menuNavContainer {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 5%;
+  display: none; }
+  .menuNavContainer .iconCloseNavMobile {
+    margin-bottom: 30px;
+    cursor: pointer; }
+  .menuNavContainer .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; }
+    .menuNavContainer .mobileNav .navLink {
+      text-decoration: none;
+      color: black;
+      font-weight: 700; }

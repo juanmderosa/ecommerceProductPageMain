@@ -1,0 +1,27 @@
+
+.menuNavContainer{
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding: 5%;
+    display: none;
+
+    .iconCloseNavMobile{
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .mobileNav{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+            .navLink{
+                text-decoration: none;
+                color: black;
+                font-weight: 700;
+            }
+    }
+}

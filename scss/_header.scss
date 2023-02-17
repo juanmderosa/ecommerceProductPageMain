@@ -1,0 +1,212 @@
+@import "vars";
+
+.headerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 5%;
+    padding: 2% 0%;
+    border-bottom: 1px solid $Lightgrayishblue;
+    @media screen and (max-width: 750px){
+        display: none;
+    }
+    
+
+    .logoyNavContainer{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        @media screen and (max-width: 950px){
+            width: 70%;
+        }
+
+        .logoContainer{
+            width: 20%;
+        }
+    
+        .navContainer{
+            width: 80%;
+            .navUlContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+    
+            }
+
+                .navLi{
+                    list-style: none;
+                    &:hover{
+                        display: block;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-size: 1rem;
+                        color: $Darkgrayishblue;
+                        font-weight: $fontWeight400;
+                        position: relative;
+                        &:hover{
+                            color: $Black
+                        }
+                        
+                    }
+                    
+                }
+        }
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -150%;
+        width: 100%;
+        height: 5px;
+        background-color: $Orange;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      
+      a:hover::after {
+        opacity: 1;
+      }
+
+      
+
+    .userContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        @media screen and (max-width: 950px){
+            width: 30%;
+        }
+
+
+        .iconsContainer{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .cartIconContainer{
+                display: flex;
+            }
+
+            .cartIcon{
+                cursor: pointer;
+
+                path:hover{
+                    fill: $Black;
+                }
+                
+            }
+
+            .cartQtyContainer{
+                width: 25px;
+                height: 15px;
+                background-color: $Orange;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 75%;
+                position: sticky;
+                
+                .cartQtyHeader{
+                    color: $White;
+                    font-size: 0.7rem;
+                    font-weight: $fontWeight700;
+                    
+                }
+            }
+            
+            .userImg{
+                width: 15%;
+                cursor: pointer;
+                @media screen and (max-width: 950px){
+                    width: 40%;
+                }
+                &:hover{
+                    border: 2px solid $Orange;
+                    border-radius: 50%;
+                }
+            }
+    }
+        
+}
+}
+.mobileMenu{
+    @media screen and (min-width: 751px){
+        display: none;
+    }
+    @media screen and (max-width: 750px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 5%;
+
+        .logoAndMenuIcon{
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            width: 50%;
+            .iconMenu{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+        .userContainerMobile{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+            .cartIconContainerMobile{
+                display: flex;
+                .cartIconMobile{
+                    width: 50%;
+                    max-width: 25px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    
+                    path:hover{
+                        fill: $Black;
+                    }
+                }
+                .cartQtyContainerMobile{
+                    width: 30px;
+                    height: 15px;
+                    background-color: $Orange;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 12%;;
+                    
+                    .cartQtyHeaderMobile{
+                        color: $White;
+                        font-size: 0.7rem;
+                        font-weight: $fontWeight700;
+                        
+                    }
+                }
+            }
+        }
+        .userImgMobile{
+            width: 15%;
+            &:hover{
+                border: 2px solid $Orange;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
