@@ -94,3 +94,23 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+## Frontend Mentor - Intro component with sign up form solution by Juan Martín De Rosa
+This is a solution to the Intro component with sign up form challenge on Frontend Mentor.
+
+Screenshot
+
+
+## Links
+Solution URL: [Github](https://github.com/juanmderosa/ecommerceProductPageMain)
+Live Site URL: [Github Pages](https://juanmderosa.github.io/ecommerceProductPageMain/)
+
+## Built with
+Semantic HTML5 markup
+CSS custom properties
+Flexbox
+CSS Grid
+Mobile-first workflow
+Responsive Design
+Javascript
